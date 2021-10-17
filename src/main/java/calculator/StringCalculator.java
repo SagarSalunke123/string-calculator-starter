@@ -9,7 +9,10 @@ class StringCalculator {
         if(size==0)
             return sum;
         for (i = 0; i < size; i++) {
+            try{
             int temp = 0;
+            if(in[i]=='-')
+                throw new Exception();
             if (Character.isDigit(in[i])) {
                 temp += Character.digit(in[i], 10);
                 for (x = i + 1; x < size; x++) {
@@ -25,7 +28,12 @@ class StringCalculator {
                 if (temp <= 1000)
                     sum += temp;
             }
-        }
+        }catch(Exception e) {
+                System.out.println("negatives not allowed -"+in[i+1]);
+                counter++;
+                return Character.digit(in[i+1], 10)*(-1);
+            }
+            }
         return sum;
     }
     public int GetCalledCount() {

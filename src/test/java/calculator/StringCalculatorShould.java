@@ -72,4 +72,10 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(10, stringCalculator.GetCalledCount());
     }
+
+    @Test
+    void string_with_negative_numbers(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(-3, stringCalculator.add("1-3"));
+    }
 }
