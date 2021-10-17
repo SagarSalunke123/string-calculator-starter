@@ -1,8 +1,9 @@
 package calculator;
 
 class StringCalculator {
-
+    static int counter=0;
     public int add(String input) {
+        counter++;
         char [] in= input.toCharArray();
         int size=in.length, sum=0, i = 0, x = 0;
         if(size==0)
@@ -26,5 +27,8 @@ class StringCalculator {
             }
         }
         return sum;
+    }
+    public int GetCalledCount() {
+        return counter;
     }
 }

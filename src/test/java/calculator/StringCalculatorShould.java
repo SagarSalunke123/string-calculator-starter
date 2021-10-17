@@ -66,4 +66,10 @@ class StringCalculatorShould {
         StringCalculator stringCalculator= new StringCalculator();
         assertEquals(6, stringCalculator.add("//[**][%%]\\n1**2%%3"));
     }
+
+    @Test
+    void count_no_of_times_add_called(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(10, stringCalculator.GetCalledCount());
+    }
 }
