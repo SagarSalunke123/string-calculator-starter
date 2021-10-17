@@ -48,4 +48,5 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(2, stringCalculator.add("2+1001"));
     }
+    
 }
