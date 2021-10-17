@@ -18,4 +18,10 @@ class StringCalculatorShould {
         assertEquals(1, stringCalculator.add("1"));
     }
 
+    @Test
+    void string_with_two_number(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3, stringCalculator.add("1,2"));
+    }
+
 }
