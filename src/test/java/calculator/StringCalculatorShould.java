@@ -36,4 +36,10 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(6, stringCalculator.add("1,2\n3"));
     }
+
+    @Test
+    void string_supporting_different_delimeter(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
 }
