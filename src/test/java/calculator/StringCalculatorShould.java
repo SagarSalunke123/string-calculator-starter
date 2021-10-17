@@ -25,4 +25,9 @@ class StringCalculatorShould {
         assertEquals(3, stringCalculator.add("1,2"));
     }
 
+    @Test
+    void string_with_many_numbers(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(16, stringCalculator.add("1,2,5,8"));
+    }
 }
