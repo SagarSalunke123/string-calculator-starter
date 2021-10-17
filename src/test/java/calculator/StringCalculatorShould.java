@@ -42,4 +42,10 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(3, stringCalculator.add("//;\n1;2"));
     }
+
+    @Test
+    void numbers_bigger_than_thousand(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(2, stringCalculator.add("2+1001"));
+    }
 }
